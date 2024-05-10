@@ -1,0 +1,252 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+        "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <title>Screenshots</title>
+
+<link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+<link rel="apple-touch-icon" sizes="57x57" href="apple-icon-57x57.png">
+<link rel="apple-touch-icon" sizes="60x60" href="apple-icon-60x60.png">
+<link rel="apple-touch-icon" sizes="72x72" href="apple-icon-72x72.png">
+<link rel="apple-touch-icon" sizes="76x76" href="apple-icon-76x76.png">
+<link rel="apple-touch-icon" sizes="114x114" href="apple-icon-114x114.png">
+<link rel="apple-touch-icon" sizes="120x120" href="apple-icon-120x120.png">
+<link rel="apple-touch-icon" sizes="144x144" href="apple-icon-144x144.png">
+<link rel="apple-touch-icon" sizes="152x152" href="apple-icon-152x152.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-icon-180x180.png">
+<link rel="icon" type="image/png" sizes="192x192"  href="android-icon-192x192.png">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="96x96" href="favicon-96x96.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<meta name="msapplication-TileColor" content="#ffffff">
+<meta name="msapplication-TileImage" content="/ms-icon-144x144.png">
+<meta name="theme-color" content="#ffffff">
+<link rel="stylesheet" href="bootstrap-icons/bootstrap-icons.css">
+<!-- JQuery -->
+<script type="text/javascript" src="scripts/jquery-1.11.1.min.js"></script><!-- Required Stylesheets -->
+<link href="bootstrap-treeview/dist/bootstrap-treeview.min.css" rel="stylesheet">
+
+<!-- Required Javascript -->
+<script src="bootstrap-treeview/dist/bootstrap-treeview.min.js"></script><!-- DataTables -->
+<link type="text/css" href="datatables/1.13.1/datatables.min.css" rel="stylesheet" />
+<script type="text/javascript" src="datatables/1.13.1/datatables.min.js"></script>
+<script type="text/javascript" src="datatables/1.13.1/time-elapsed-dhms.js"></script>
+
+<link href="bootstrap/css/bootstrap.min.css" rel="stylesheet">
+<script src="bootstrap/js/bootstrap.min.js"></script>
+
+
+<script>
+    jQuery.fn.dataTable.ext.type.order['time-elapsed-dhms-pre'] = function(data) {
+
+        var matches = data.match(/^(\d+(?:\.\d+)?)\s*([a-z]+)/i);
+        var multipliers = {
+            ms: 1,
+            s: 1000,
+            m: 60000,
+            h: 3600000,
+            d: 86400000
+        };
+
+        if (matches) {
+            var multiplier = multipliers[matches[2].toLowerCase()];
+            return parseFloat(matches[1]) * multiplier;
+        } else {
+            return -1;
+        };
+    };
+</script>
+<link rel="stylesheet" href="css/core.css"/>
+<link rel="stylesheet" href="css/link.css"/>
+<link type="text/css" media="screen" href="css/screen.css" rel="Stylesheet"/>
+<!--CHART.JS-->
+<script src="chartjs/chart.js"></script>
+<script src="chartjs/chartjs-plugin-datalabels@2.0.0"></script>
+<script src="chartjs/patternomaly.min.js"></script>
+<script>
+    // Register the plugin to all charts:
+    Chart.register(ChartDataLabels);
+</script>
+<!-- Nivo Slider -->
+<link rel="stylesheet" href="nivo-slider/3.2/nivo-slider.css" type="text/css" media="screen" />
+<link rel="stylesheet" href="nivo-slider/3.2/themes/default/default.css" type="text/css" media="screen" />
+<script src="nivo-slider/3.2/jquery.nivo.slider.pack.js" type="text/javascript"></script>
+
+    <script type="text/javascript">
+
+        function getUrlVars() {
+            var vars = {};
+            var parts = window.location.href.replace(/[?&]+([^=&]+)=([^&]*)/gi, function (m, key, value) {
+                vars[key] = value;
+            });
+            return vars;
+        }
+
+        var screenshotIndex = getUrlVars()["screenshot"];
+
+        $(window).load(function () {
+            $('#slider').nivoSlider({
+                startSlide: screenshotIndex,
+                effect: 'fade',
+                animSpeed: 200,
+                manualAdvance: true
+            });
+        });
+
+        $(window).keydown(function(e) {
+            switch(e.which) {
+                case 37:
+                    $('a.nivo-prevNav').click();
+                    break;
+                case 39:
+                    $('a.nivo-nextNav').click();
+                    break;
+            }
+        });
+    </script>
+
+</head>
+
+<body>
+<div id="topheader">
+    <div id="topbanner">
+        <div id="logo"><a href="index.html"><img src="images/serenity-logo.png" border="0"/></a></div>
+        <div id="projectname-banner" style="float:right">
+            <span class="projectname">
+                <span class="projecttitle">EngineBI</span>
+                <span class="projectsubtitle"></span>
+            </span>
+        </div>
+    </div>
+</div>
+
+<div class="middlecontent">
+    <div id="contenttop">
+        <div class="middlebg">
+            <span class="breadcrumbs">
+                <a href="index.html">Home</a>
+                > <span class="truncate-40"><a
+                    href="ce100976a4d2878b3e354d7e32ab89749e3f401237c45bd9059a95e3b5a389f2.html">As A User Of The Page</a></span>
+                > <span class="truncate-60"><a
+                    href="b24c01fd1f460cf3862f3d9b520c3a5eae8edbabbb3a706406a191fbf43eef3d.html">Get a free account on EngineBI </a></span>
+                > Screenshots
+            </span>
+        </div>
+        <div class="rightbg"></div>
+    </div>
+
+    <div class="clr"></div>
+
+    <!--/* starts second table*/-->
+<div>
+    <ul class="nav nav-tabs" role="tablist">
+        <li class="active">
+            <a href="#"><i class="bi bi-journal-check"></i> Overall Test Results</a>
+        </li>
+        <li >
+            <a href="capabilities.html"><i class="bi bi-journal-text"></i> Requirements</a>
+        </li>
+        <li >
+            <a href="576946480b52ad056d6f5bddf874399c83582ecf90963cc074a14c70580e7d9f.html"><i class="bi bi-chat-text"></i> Features</a>
+        </li>
+    </ul>
+    <span class="date-and-time"><a href="build-info.html"><i class="bi bi-info-circle"></i></a> Report generated 10-05-2024 11:34</span>
+    <br style="clear:left"/>
+</div>
+
+    <div class="clr"></div>
+
+
+    <div id="contentbody">
+        <div class="titlebar">
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td>
+                            <div>
+                                <h3 class="discreet-story-header">
+                                    <i class="fs-2 bi bi-chat-left-quote large-icon"></i>
+                                    <span class="story-header-title">As A User Of The Page </span>
+                                    <span class="badge tag-badge" style="">Feature</span>
+                                </h3>
+
+                                <div class="discreet-requirement-narrative-title">
+                                I want to obtain a free account<br />
+to test the services offered
+                                </div>
+                            </div>
+
+                        </td>
+                        <td valign="top" align="right">
+                        </td>
+                    </tr>
+                </table>
+            </div>
+            <div class="story-title">
+                <table class="outcome-header">
+                    <tr>
+                        <td colspan="2" class="test-title-bar">
+                            <span class="outcome-icon"><a href='##beforetable'><i class='bi bi-check-circle-fill success-icon fa-2x' title='SUCCESS'></i></a></span>
+                            <span class="test-case-title">
+                                <span class="success-color">Get a free account on EngineBI
+                                    <span class="related-issue-title"></span>
+                                </span>
+                            </span>
+
+                        </td>
+                    </tr>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <div class="clr"></div>
+
+
+    <div id="beforetable"></div>
+    <div id="contenttilttle">
+        <div class="slider-wrapper theme-default">
+            <div id="slider">
+                <img src="2a2c923b32dd8725a6be8793d67f588dd1811d9bb6b1f13574b5810d3bcb8c53.png" title=" Given that the user is on the EngineBI homepage" width="1920"/>
+                <img src="2a2c923b32dd8725a6be8793d67f588dd1811d9bb6b1f13574b5810d3bcb8c53.png" title=" Alvaro task open page" width="1920"/>
+                <img src="2a2c923b32dd8725a6be8793d67f588dd1811d9bb6b1f13574b5810d3bcb8c53.png" title=" Alvaro opens the Open page engine bi" width="1920"/>
+                <img src="2a2c923b32dd8725a6be8793d67f588dd1811d9bb6b1f13574b5810d3bcb8c53.png" title=" Given that the user is on the EngineBI homepage" width="1920"/>
+                <img src="2a2c923b32dd8725a6be8793d67f588dd1811d9bb6b1f13574b5810d3bcb8c53.png" title=" Alvaro task open page (completed)" width="1920"/>
+                <img src="6cf74379c8071d213ca0cd92a2f44f85f511d6924aacd8a8769115f5afaead6f.png" title=" When the user goes to the free account and fills out the form
+| firstName | lastName | email | phone |
+| TestCom | test last name | test5@test.com | 2223222222 |" width="1920"/>
+                <img src="6cf74379c8071d213ca0cd92a2f44f85f511d6924aacd8a8769115f5afaead6f.png" title=" Alvaro sent form free account" width="1920"/>
+                <img src="6cf74379c8071d213ca0cd92a2f44f85f511d6924aacd8a8769115f5afaead6f.png" title=" Alvaro clicks on Click on start now" width="1920"/>
+                <img src="6b9f73377c499ac5502641ff4672907856ae431dc74b4401a6c3bb986a7b3b81.png" title=" Alvaro enters 'TestCom' into Enter first name " width="1920"/>
+                <img src="172351457afb86176c7888062dffd7a2bbd7e610b34b0b8c2c2c64c2e90b5406.png" title=" Alvaro enters 'test last name' into Enter last name " width="1920"/>
+                <img src="4eaf61184f79935316377565d6ff13feef90287b6c35dc96644a7fd52359d0f6.png" title=" Alvaro enters 'test5@test.com' into Enter email " width="1920"/>
+                <img src="5b2929ce1d59a17be0bb177d4c6750247cf758c038930b5330510e7e324e8eee.png" title=" Alvaro enters '2223222222' into Enter phone " width="1920"/>
+                <img src="7a9c6e45af6468a2ea707145ac82bbbc532cbf811b5e00905cd725aeba4e648a.png" title=" Alvaro clicks on Click on button next " width="1920"/>
+                <img src="dadf3aca25bccd3177b1f2ec5f5d3cee035019b819032fc4b8ad6d6ec08b22b8.png" title=" Alvaro enters 'TestCom' into Enter company " width="1920"/>
+                <img src="e88aab0fac054904b86c241b0cfd0817404736893c52c626de841878f45937fc.png" title=" Alvaro clicks on Enter country " width="1920"/>
+                <img src="4b68ce5b14b587402c80ab73b90e5182db5997fee1806cbef45691afc305c95f.png" title=" Alvaro clicks on Enter country " width="1920"/>
+                <img src="97f5484ceba865734c11f5eb2084a651b2e95b0ee871f0f8de05db087e4e6652.png" title=" Alvaro clicks on Enter state " width="1920"/>
+                <img src="1164ee1f63703303ad7fd8a42febd1731df161182305595a826c6ee697850bfb.png" title=" Alvaro clicks on Enter state " width="1920"/>
+                <img src="0affef7c98c892a79492b0c29276adbc3d758ea2a24a93aa428a8bcf3a7be709.png" title=" Alvaro enters 'TestCom' into Enter city " width="1920"/>
+                <img src="dd9ee285f73e4b5305820aa4ef614199a5b68f358eff19eb4feb57c1c5f06aaa.png" title=" Alvaro clicks on Click on terms and contidions " width="1920"/>
+                <img src="f698e45863f08059c302ce1d9c81eb2fc161900fd3054fff4d2164ab5dba1a52.png" title=" When the user goes to the free account and fills out the form
+| firstName | lastName | email | phone |
+| TestCom | test last name | test5@test.com | 2223222222 |" width="1920"/>
+                <img src="f698e45863f08059c302ce1d9c81eb2fc161900fd3054fff4d2164ab5dba1a52.png" title=" Alvaro sent form free account" width="1920"/>
+                <img src="f698e45863f08059c302ce1d9c81eb2fc161900fd3054fff4d2164ab5dba1a52.png" title=" Alvaro clicks on Click on button next " width="1920"/>
+                <img src="75ed880319195be29250b80198c971b8d0da96e0ea0dcec69e32a012ac6b0123.png" title=" Then the user should see the next confirmation message &quot;Your 30 Day Free Trial subscription has been successfully completed!&quot;" width="1920"/>
+                <img src="75ed880319195be29250b80198c971b8d0da96e0ea0dcec69e32a012ac6b0123.png" title=" Then q verify free acoount: <span class='success-color'>SUCCESS</span>" width="1920"/>
+            </div>
+        </div>
+
+
+    </div>
+</div>
+<div id="beforefooter"></div>
+<div id="bottomfooter">
+    <span class="version">Serenity BDD version 3.6.12</span>
+</div>
+</body>
+</html>
